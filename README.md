@@ -1,21 +1,22 @@
 # vue-spa-template
 
-> vue-spa-template project
+> 基于 vue-cli 生成的多入口脚手架
 
 ## Build Setup
 
 ``` bash
-# install dependencies
+# 安装依赖
 npm install
 
-# serve with hot reload at localhost:8080
+# 服务启动热加载： localhost:8080
 npm run dev
 
-# build for production with minification
+# 打包生产资源
 npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
 ```
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+为了自已以后方便创建项目，搭建了该多入口开发的vue脚手架。
+
+ 1. 入口主要在 view 目录下，该目录下每个文件夹为一个入口，文件夹名称加上 .html 就是入口文件。
+ 2. 把vuex添加进来了，可以为每个入口处理一个vuex,不需要的话则不需要处理。
+ 3. 添加了 vue-route ，并参考vue-route 官网写了一下组件过渡效果。

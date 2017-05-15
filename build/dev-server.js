@@ -62,6 +62,17 @@ app.use(hotMiddleware)
 var staticPath = path.posix.join(config.dev.assetsPublicPath, config.dev.assetsSubDirectory)
 app.use(staticPath, express.static('./static'))
 
+// 开发阶段如果想要跨域请求接口的话，可以使用插件 http-proxy-middleware,github路径： https://github.com/chimurai/http-proxy-middleware
+// 简单配置
+// var proxy = require('http-proxy-middleware');
+// app.use(
+//   '/api', // 代理的接口
+//   proxy({
+//     target: 'http://www.example.org', // 代理的接口路径
+//     changeOrigin: true
+//   })
+// );
+
 // 默认启动路径
 var uri = 'http://localhost:' + port + '/login.html'
 
